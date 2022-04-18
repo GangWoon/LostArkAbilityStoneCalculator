@@ -1,0 +1,703 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 55;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		AE92748D280D9F0900799B6F /* LostArkAbilityStoneCalculatorApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE92748C280D9F0900799B6F /* LostArkAbilityStoneCalculatorApp.swift */; };
+		AE927491280D9F1000799B6F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = AE927490280D9F1000799B6F /* Assets.xcassets */; };
+		AE92749E280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE92749D280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.swift */; };
+		AE9274BD280DA22900799B6F /* ComposableArchitecture in Frameworks */ = {isa = PBXBuildFile; productRef = AE9274BC280DA22900799B6F /* ComposableArchitecture */; };
+		AE9274C0280DA28A00799B6F /* View+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274BF280DA28A00799B6F /* View+Extension.swift */; };
+		AE9274C2280DA2F600799B6F /* AppView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274C1280DA2F600799B6F /* AppView.swift */; };
+		AE9274C5280DA32D00799B6F /* AppCore.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274C4280DA32D00799B6F /* AppCore.swift */; };
+		AE9274C7280DA34600799B6F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274C6280DA34600799B6F /* AppDelegate.swift */; };
+		AE9274C9280DA38D00799B6F /* ContentHeaderView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274C8280DA38D00799B6F /* ContentHeaderView.swift */; };
+		AE9274CB280DA3A100799B6F /* PresetView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274CA280DA3A100799B6F /* PresetView.swift */; };
+		AE9274CD280DA3B000799B6F /* AbilityRowView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274CC280DA3B000799B6F /* AbilityRowView.swift */; };
+		AE9274CF280DA3C400799B6F /* GuideView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274CE280DA3C400799B6F /* GuideView.swift */; };
+		AE9274D1280DA3D500799B6F /* AlertView.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274D0280DA3D500799B6F /* AlertView.swift */; };
+		AE9274D4280DA42200799B6F /* String+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274D3280DA42200799B6F /* String+Extension.swift */; };
+		AE9274D6280DA43300799B6F /* Font+Extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274D5280DA43300799B6F /* Font+Extension.swift */; };
+		AE9274D8280DA45600799B6F /* AttributedText.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274D7280DA45600799B6F /* AttributedText.swift */; };
+		AE9274DA280DA46C00799B6F /* AnimatedImage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274D9280DA46C00799B6F /* AnimatedImage.swift */; };
+		AE9274E0280DA49B00799B6F /* SCDreamExtraLight.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE9274DD280DA49B00799B6F /* SCDreamExtraLight.otf */; };
+		AE9274E1280DA49B00799B6F /* SCDreamBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE9274DE280DA49B00799B6F /* SCDreamBold.otf */; };
+		AE9274E2280DA49B00799B6F /* SCDreamMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE9274DF280DA49B00799B6F /* SCDreamMedium.otf */; };
+		AE9274E5280DA4F600799B6F /* AbilityStoneCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274E4280DA4F600799B6F /* AbilityStoneCalculator.swift */; };
+		AE9274E8280DA53600799B6F /* PermanentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274E7280DA53600799B6F /* PermanentStorage.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		AE92749A280D9F1100799B6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE927481280D9F0900799B6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE927488280D9F0900799B6F;
+			remoteInfo = LostArkAbilityStoneCalculator;
+		};
+		AE9274A4280D9F1100799B6F /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = AE927481280D9F0900799B6F /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = AE927488280D9F0900799B6F;
+			remoteInfo = LostArkAbilityStoneCalculator;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		AE927489280D9F0900799B6F /* LostArkAbilityStoneCalculator.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = LostArkAbilityStoneCalculator.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE92748C280D9F0900799B6F /* LostArkAbilityStoneCalculatorApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostArkAbilityStoneCalculatorApp.swift; sourceTree = "<group>"; };
+		AE927490280D9F1000799B6F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		AE927499280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostArkAbilityStoneCalculatorTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE92749D280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LostArkAbilityStoneCalculatorTests.swift; sourceTree = "<group>"; };
+		AE9274A3280D9F1100799B6F /* LostArkAbilityStoneCalculatorUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = LostArkAbilityStoneCalculatorUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		AE9274BF280DA28A00799B6F /* View+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "View+Extension.swift"; sourceTree = "<group>"; };
+		AE9274C1280DA2F600799B6F /* AppView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppView.swift; sourceTree = "<group>"; };
+		AE9274C4280DA32D00799B6F /* AppCore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppCore.swift; sourceTree = "<group>"; };
+		AE9274C6280DA34600799B6F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		AE9274C8280DA38D00799B6F /* ContentHeaderView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentHeaderView.swift; sourceTree = "<group>"; };
+		AE9274CA280DA3A100799B6F /* PresetView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PresetView.swift; sourceTree = "<group>"; };
+		AE9274CC280DA3B000799B6F /* AbilityRowView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityRowView.swift; sourceTree = "<group>"; };
+		AE9274CE280DA3C400799B6F /* GuideView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GuideView.swift; sourceTree = "<group>"; };
+		AE9274D0280DA3D500799B6F /* AlertView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertView.swift; sourceTree = "<group>"; };
+		AE9274D3280DA42200799B6F /* String+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+Extension.swift"; sourceTree = "<group>"; };
+		AE9274D5280DA43300799B6F /* Font+Extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Font+Extension.swift"; sourceTree = "<group>"; };
+		AE9274D7280DA45600799B6F /* AttributedText.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AttributedText.swift; sourceTree = "<group>"; };
+		AE9274D9280DA46C00799B6F /* AnimatedImage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnimatedImage.swift; sourceTree = "<group>"; };
+		AE9274DD280DA49B00799B6F /* SCDreamExtraLight.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDreamExtraLight.otf; sourceTree = "<group>"; };
+		AE9274DE280DA49B00799B6F /* SCDreamBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDreamBold.otf; sourceTree = "<group>"; };
+		AE9274DF280DA49B00799B6F /* SCDreamMedium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = SCDreamMedium.otf; sourceTree = "<group>"; };
+		AE9274E4280DA4F600799B6F /* AbilityStoneCalculator.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityStoneCalculator.swift; sourceTree = "<group>"; };
+		AE9274E7280DA53600799B6F /* PermanentStorage.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PermanentStorage.swift; sourceTree = "<group>"; };
+		AE9274EA280DA58D00799B6F /* Montserrat-Regular.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Regular.ttf"; sourceTree = "<group>"; };
+		AE9274EB280DA59800799B6F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
+		AE9274EC280DA59E00799B6F /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
+		AE9274ED280DA61F00799B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		AE927486280D9F0900799B6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9274BD280DA22900799B6F /* ComposableArchitecture in Frameworks */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE927496280D9F1100799B6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9274A0280D9F1100799B6F /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		AE927480280D9F0900799B6F = {
+			isa = PBXGroup;
+			children = (
+				AE92748B280D9F0900799B6F /* LostArkAbilityStoneCalculator */,
+				AE92749C280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests */,
+				AE92748A280D9F0900799B6F /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		AE92748A280D9F0900799B6F /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				AE927489280D9F0900799B6F /* LostArkAbilityStoneCalculator.app */,
+				AE927499280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.xctest */,
+				AE9274A3280D9F1100799B6F /* LostArkAbilityStoneCalculatorUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		AE92748B280D9F0900799B6F /* LostArkAbilityStoneCalculator */ = {
+			isa = PBXGroup;
+			children = (
+				AE9274C3280DA31E00799B6F /* App */,
+				AE9274C8280DA38D00799B6F /* ContentHeaderView.swift */,
+				AE9274CA280DA3A100799B6F /* PresetView.swift */,
+				AE9274CC280DA3B000799B6F /* AbilityRowView.swift */,
+				AE9274CE280DA3C400799B6F /* GuideView.swift */,
+				AE9274D0280DA3D500799B6F /* AlertView.swift */,
+				AE9274E3280DA4D300799B6F /* Environment */,
+				AE9274BE280DA25900799B6F /* Util */,
+				AE9274D2280DA3F400799B6F /* Resource */,
+			);
+			path = LostArkAbilityStoneCalculator;
+			sourceTree = "<group>";
+		};
+		AE92749C280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests */ = {
+			isa = PBXGroup;
+			children = (
+				AE92749D280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.swift */,
+			);
+			path = LostArkAbilityStoneCalculatorTests;
+			sourceTree = "<group>";
+		};
+		AE9274BE280DA25900799B6F /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				AE9274BF280DA28A00799B6F /* View+Extension.swift */,
+				AE9274D3280DA42200799B6F /* String+Extension.swift */,
+				AE9274D5280DA43300799B6F /* Font+Extension.swift */,
+				AE9274D7280DA45600799B6F /* AttributedText.swift */,
+				AE9274D9280DA46C00799B6F /* AnimatedImage.swift */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		AE9274C3280DA31E00799B6F /* App */ = {
+			isa = PBXGroup;
+			children = (
+				AE92748C280D9F0900799B6F /* LostArkAbilityStoneCalculatorApp.swift */,
+				AE9274C6280DA34600799B6F /* AppDelegate.swift */,
+				AE9274C1280DA2F600799B6F /* AppView.swift */,
+				AE9274C4280DA32D00799B6F /* AppCore.swift */,
+			);
+			path = App;
+			sourceTree = "<group>";
+		};
+		AE9274D2280DA3F400799B6F /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				AE9274ED280DA61F00799B6F /* Info.plist */,
+				AE927490280D9F1000799B6F /* Assets.xcassets */,
+				AE9274DB280DA48A00799B6F /* Font */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		AE9274DB280DA48A00799B6F /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				AE9274DD280DA49B00799B6F /* SCDreamExtraLight.otf */,
+				AE9274DE280DA49B00799B6F /* SCDreamBold.otf */,
+				AE9274DF280DA49B00799B6F /* SCDreamMedium.otf */,
+				AE9274EA280DA58D00799B6F /* Montserrat-Regular.ttf */,
+				AE9274EB280DA59800799B6F /* Montserrat-Medium.ttf */,
+				AE9274EC280DA59E00799B6F /* Montserrat-SemiBold.ttf */,
+			);
+			path = Font;
+			sourceTree = "<group>";
+		};
+		AE9274E3280DA4D300799B6F /* Environment */ = {
+			isa = PBXGroup;
+			children = (
+				AE9274E4280DA4F600799B6F /* AbilityStoneCalculator.swift */,
+				AE9274E7280DA53600799B6F /* PermanentStorage.swift */,
+			);
+			path = Environment;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		AE927488280D9F0900799B6F /* LostArkAbilityStoneCalculator */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9274AD280D9F1100799B6F /* Build configuration list for PBXNativeTarget "LostArkAbilityStoneCalculator" */;
+			buildPhases = (
+				AE927485280D9F0900799B6F /* Sources */,
+				AE927486280D9F0900799B6F /* Frameworks */,
+				AE927487280D9F0900799B6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = LostArkAbilityStoneCalculator;
+			packageProductDependencies = (
+				AE9274BC280DA22900799B6F /* ComposableArchitecture */,
+			);
+			productName = LostArkAbilityStoneCalculator;
+			productReference = AE927489280D9F0900799B6F /* LostArkAbilityStoneCalculator.app */;
+			productType = "com.apple.product-type.application";
+		};
+		AE927498280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9274B0280D9F1100799B6F /* Build configuration list for PBXNativeTarget "LostArkAbilityStoneCalculatorTests" */;
+			buildPhases = (
+				AE927495280D9F1100799B6F /* Sources */,
+				AE927496280D9F1100799B6F /* Frameworks */,
+				AE927497280D9F1100799B6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE92749B280D9F1100799B6F /* PBXTargetDependency */,
+			);
+			name = LostArkAbilityStoneCalculatorTests;
+			productName = LostArkAbilityStoneCalculatorTests;
+			productReference = AE927499280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		AE9274A2280D9F1100799B6F /* LostArkAbilityStoneCalculatorUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = AE9274B3280D9F1100799B6F /* Build configuration list for PBXNativeTarget "LostArkAbilityStoneCalculatorUITests" */;
+			buildPhases = (
+				AE92749F280D9F1100799B6F /* Sources */,
+				AE9274A0280D9F1100799B6F /* Frameworks */,
+				AE9274A1280D9F1100799B6F /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				AE9274A5280D9F1100799B6F /* PBXTargetDependency */,
+			);
+			name = LostArkAbilityStoneCalculatorUITests;
+			productName = LostArkAbilityStoneCalculatorUITests;
+			productReference = AE9274A3280D9F1100799B6F /* LostArkAbilityStoneCalculatorUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		AE927481280D9F0900799B6F /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1330;
+				LastUpgradeCheck = 1330;
+				TargetAttributes = {
+					AE927488280D9F0900799B6F = {
+						CreatedOnToolsVersion = 13.3;
+					};
+					AE927498280D9F1100799B6F = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = AE927488280D9F0900799B6F;
+					};
+					AE9274A2280D9F1100799B6F = {
+						CreatedOnToolsVersion = 13.3;
+						TestTargetID = AE927488280D9F0900799B6F;
+					};
+				};
+			};
+			buildConfigurationList = AE927484280D9F0900799B6F /* Build configuration list for PBXProject "LostArkAbilityStoneCalculator" */;
+			compatibilityVersion = "Xcode 13.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = AE927480280D9F0900799B6F;
+			packageReferences = (
+				AE9274BB280DA22900799B6F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */,
+			);
+			productRefGroup = AE92748A280D9F0900799B6F /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				AE927488280D9F0900799B6F /* LostArkAbilityStoneCalculator */,
+				AE927498280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests */,
+				AE9274A2280D9F1100799B6F /* LostArkAbilityStoneCalculatorUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		AE927487280D9F0900799B6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9274E2280DA49B00799B6F /* SCDreamMedium.otf in Resources */,
+				AE9274E1280DA49B00799B6F /* SCDreamBold.otf in Resources */,
+				AE927491280D9F1000799B6F /* Assets.xcassets in Resources */,
+				AE9274E0280DA49B00799B6F /* SCDreamExtraLight.otf in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE927497280D9F1100799B6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE9274A1280D9F1100799B6F /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		AE927485280D9F0900799B6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE9274E8280DA53600799B6F /* PermanentStorage.swift in Sources */,
+				AE9274CF280DA3C400799B6F /* GuideView.swift in Sources */,
+				AE9274D4280DA42200799B6F /* String+Extension.swift in Sources */,
+				AE9274D6280DA43300799B6F /* Font+Extension.swift in Sources */,
+				AE9274CD280DA3B000799B6F /* AbilityRowView.swift in Sources */,
+				AE9274DA280DA46C00799B6F /* AnimatedImage.swift in Sources */,
+				AE9274C0280DA28A00799B6F /* View+Extension.swift in Sources */,
+				AE92748D280D9F0900799B6F /* LostArkAbilityStoneCalculatorApp.swift in Sources */,
+				AE9274E5280DA4F600799B6F /* AbilityStoneCalculator.swift in Sources */,
+				AE9274C5280DA32D00799B6F /* AppCore.swift in Sources */,
+				AE9274D1280DA3D500799B6F /* AlertView.swift in Sources */,
+				AE9274C9280DA38D00799B6F /* ContentHeaderView.swift in Sources */,
+				AE9274C7280DA34600799B6F /* AppDelegate.swift in Sources */,
+				AE9274D8280DA45600799B6F /* AttributedText.swift in Sources */,
+				AE9274C2280DA2F600799B6F /* AppView.swift in Sources */,
+				AE9274CB280DA3A100799B6F /* PresetView.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE927495280D9F1100799B6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				AE92749E280D9F1100799B6F /* LostArkAbilityStoneCalculatorTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		AE92749F280D9F1100799B6F /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		AE92749B280D9F1100799B6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE927488280D9F0900799B6F /* LostArkAbilityStoneCalculator */;
+			targetProxy = AE92749A280D9F1100799B6F /* PBXContainerItemProxy */;
+		};
+		AE9274A5280D9F1100799B6F /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = AE927488280D9F0900799B6F /* LostArkAbilityStoneCalculator */;
+			targetProxy = AE9274A4280D9F1100799B6F /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin XCBuildConfiguration section */
+		AE9274AB280D9F1100799B6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		AE9274AC280D9F1100799B6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++17";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		AE9274AE280D9F1100799B6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HG325P9V2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LostArkAbilityStoneCalculator/Resource/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cLoud.LostArkAbilityStoneCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		AE9274AF280D9F1100799B6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HG325P9V2;
+				ENABLE_PREVIEWS = YES;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_FILE = LostArkAbilityStoneCalculator/Resource/Info.plist;
+				INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchScreen_Generation = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cLoud.LostArkAbilityStoneCalculator;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		AE9274B1280D9F1100799B6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HG325P9V2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cLoud.LostArkAbilityStoneCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LostArkAbilityStoneCalculator.app/LostArkAbilityStoneCalculator";
+			};
+			name = Debug;
+		};
+		AE9274B2280D9F1100799B6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HG325P9V2;
+				GENERATE_INFOPLIST_FILE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 15.4;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cLoud.LostArkAbilityStoneCalculatorTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/LostArkAbilityStoneCalculator.app/LostArkAbilityStoneCalculator";
+			};
+			name = Release;
+		};
+		AE9274B4280D9F1100799B6F /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HG325P9V2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cLoud.LostArkAbilityStoneCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LostArkAbilityStoneCalculator;
+			};
+			name = Debug;
+		};
+		AE9274B5280D9F1100799B6F /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				DEVELOPMENT_TEAM = 6HG325P9V2;
+				GENERATE_INFOPLIST_FILE = YES;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = cLoud.LostArkAbilityStoneCalculatorUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_EMIT_LOC_STRINGS = NO;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = LostArkAbilityStoneCalculator;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		AE927484280D9F0900799B6F /* Build configuration list for PBXProject "LostArkAbilityStoneCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9274AB280D9F1100799B6F /* Debug */,
+				AE9274AC280D9F1100799B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9274AD280D9F1100799B6F /* Build configuration list for PBXNativeTarget "LostArkAbilityStoneCalculator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9274AE280D9F1100799B6F /* Debug */,
+				AE9274AF280D9F1100799B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9274B0280D9F1100799B6F /* Build configuration list for PBXNativeTarget "LostArkAbilityStoneCalculatorTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9274B1280D9F1100799B6F /* Debug */,
+				AE9274B2280D9F1100799B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		AE9274B3280D9F1100799B6F /* Build configuration list for PBXNativeTarget "LostArkAbilityStoneCalculatorUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				AE9274B4280D9F1100799B6F /* Debug */,
+				AE9274B5280D9F1100799B6F /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		AE9274BB280DA22900799B6F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/pointfreeco/swift-composable-architecture.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 0.9.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		AE9274BC280DA22900799B6F /* ComposableArchitecture */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = AE9274BB280DA22900799B6F /* XCRemoteSwiftPackageReference "swift-composable-architecture" */;
+			productName = ComposableArchitecture;
+		};
+/* End XCSwiftPackageProductDependency section */
+	};
+	rootObject = AE927481280D9F0900799B6F /* Project object */;
+}
