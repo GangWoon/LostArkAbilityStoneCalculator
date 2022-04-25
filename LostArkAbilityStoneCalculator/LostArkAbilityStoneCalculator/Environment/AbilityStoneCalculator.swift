@@ -81,9 +81,9 @@ final class AbilityStoneCalculator {
     
     func readyToCalculate() -> AnyPublisher<Bool, Error> {
         return $isValid
-            .tryMap { [self] _ in
-                let _ = try calculateResult(type: .totalFourteen)
-                let _ = try calculateResult(type: .totalSixteen)
+            .tryMap { [weak self] _ in
+                let _ = try self?.calculateResult(type: .totalFourteen)
+                let _ = try self?.calculateResult(type: .totalSixteen)
                 return true
             }
             .mapError { _ in Error.notReady }

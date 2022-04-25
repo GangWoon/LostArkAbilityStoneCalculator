@@ -29,6 +29,7 @@
 		AE9274E2280DA49B00799B6F /* SCDreamMedium.otf in Resources */ = {isa = PBXBuildFile; fileRef = AE9274DF280DA49B00799B6F /* SCDreamMedium.otf */; };
 		AE9274E5280DA4F600799B6F /* AbilityStoneCalculator.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274E4280DA4F600799B6F /* AbilityStoneCalculator.swift */; };
 		AE9274E8280DA53600799B6F /* PermanentStorage.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9274E7280DA53600799B6F /* PermanentStorage.swift */; };
+		AE9B50E82816E83300D1EC9A /* AbilityStoneCalculatorOrigin.swift in Sources */ = {isa = PBXBuildFile; fileRef = AE9B50E72816E83300D1EC9A /* AbilityStoneCalculatorOrigin.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -77,6 +78,7 @@
 		AE9274EB280DA59800799B6F /* Montserrat-Medium.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-Medium.ttf"; sourceTree = "<group>"; };
 		AE9274EC280DA59E00799B6F /* Montserrat-SemiBold.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Montserrat-SemiBold.ttf"; sourceTree = "<group>"; };
 		AE9274ED280DA61F00799B6F /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		AE9B50E72816E83300D1EC9A /* AbilityStoneCalculatorOrigin.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AbilityStoneCalculatorOrigin.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -197,6 +199,7 @@
 		AE9274E3280DA4D300799B6F /* Environment */ = {
 			isa = PBXGroup;
 			children = (
+				AE9B50E72816E83300D1EC9A /* AbilityStoneCalculatorOrigin.swift */,
 				AE9274E4280DA4F600799B6F /* AbilityStoneCalculator.swift */,
 				AE9274E7280DA53600799B6F /* PermanentStorage.swift */,
 			);
@@ -341,6 +344,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				AE9B50E82816E83300D1EC9A /* AbilityStoneCalculatorOrigin.swift in Sources */,
 				AE9274E8280DA53600799B6F /* PermanentStorage.swift in Sources */,
 				AE9274CF280DA3C400799B6F /* GuideView.swift in Sources */,
 				AE9274D4280DA42200799B6F /* String+Extension.swift in Sources */,
