@@ -29,6 +29,7 @@ struct AppView: View {
                             .transition(.opacity)
                     }
                 )
+                .animation(.easeInOut, value:viewStore.guideState)
                 
                 IfLetStore(
                     store.scope(
@@ -65,7 +66,10 @@ struct AppView: View {
                         state: \.resetAlertState,
                         action: AppAction.resetAlert
                     ),
-                    then: { AlertView(store: $0) }
+                    then: {
+                        AlertView(store: $0)
+                            .transition(.opacity.animation(.easeInOut))
+                    }
                 )
             }
             .onAppear {

@@ -22,23 +22,9 @@ struct AbilityRow: View {
                     VStack(alignment: .leading, spacing: 2) {
                         Text(viewStore.type.description)
                             .font(theme.font.title)
-                            .tracking(0.14)
-                            .shadow(
-                                color: theme.color.titleShadow,
-                                radius:4,
-                                x:0,
-                                y:4
-                            )
                         
                         Text(viewStore.recommendationProbability)
                             .font(theme.font.detail)
-                            .tracking(0.03)
-                            .shadow(
-                                color: theme.color.titleShadow,
-                                radius:4,
-                                x:0,
-                                y:4
-                            )
                     }
                     .foregroundColor(theme.color.titleFont)
                     
