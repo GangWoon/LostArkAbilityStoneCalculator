@@ -29,7 +29,6 @@ struct AppView: View {
                             .transition(.opacity)
                     }
                 )
-                .animation(.easeInOut, value:viewStore.guideState)
                 
                 IfLetStore(
                     store.scope(
@@ -41,7 +40,7 @@ struct AppView: View {
                             Spacer()
                             
                             AnimatedImage(store: store)
-                            .frame(width: 300, height: 300)
+                            .frame(width: 200, height: 200)
                             
                             Spacer()
                                 .frame(height: 12)
@@ -157,16 +156,8 @@ extension AppView {
         }
         
         struct ImageCollection {
-            static let standard = Self(
-                logo: Image("logo"),
-                animation: [
-                    .init(named: "cuteMokoko")!,
-                    .init(named: "angryMokoko")!,
-                    .init(named: "smellMokoko")!,
-                ]
-            )
+            static let standard = Self(logo: Image("logo"))
             let logo: Image
-            let animation: [UIImage]
         }
         
         static let standard = Self(

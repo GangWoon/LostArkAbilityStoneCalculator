@@ -5,9 +5,12 @@ import ComposableArchitecture
 struct AnimatedImageState: Equatable {
     static let empty = Self(
         imageNameList: [
-            "cuteMokoko",
-            "angryMokoko",
-            "smellMokoko"
+            "sunrise.fill",
+            "sun.max.fill",
+            "sunset.fill",
+            "moon.fill",
+            "moon.stars.fill",
+            "hand.wave.fill"
         ]
     )
     var imageName: String {
@@ -64,7 +67,7 @@ final class AnimatedImageTimer {
 let animatedImageReducer = Reducer<AnimatedImageState, AnimatedImageAction, AnimatedImageEnvironment> { state, action, environment in
     switch action {
     case .onAppear:
-        return environment.fireTimer(2)
+        return environment.fireTimer(state.imageNameList.count - 1)
             .eraseToEffect()
             .catchToEffect(AnimatedImageAction.animateImage)
         
@@ -86,7 +89,7 @@ struct AnimatedImage: View {
     
     var body: some View {
         WithViewStore(store) { viewStore in
-            Image(viewStore.imageName)
+            Image(systemName: viewStore.imageName)
             .resizable()
             .onAppear { viewStore.send(.onAppear) }
         }
