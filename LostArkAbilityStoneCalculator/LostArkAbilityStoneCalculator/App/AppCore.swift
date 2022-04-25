@@ -148,8 +148,11 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
             )
             
         case .contentHeader(action: .resetButtonTapped):
+            guard !environment.itemFromDefaults(.alertViewVisible) else {
+                state.resetAlertState = .empty
+                return .none
+            }
             state.idStack = []
-            state.resetAlertState = environment.itemFromDefaults(.alertViewVisible) ? .empty : nil
             let result = environment.calculate(.reset(type: state.presetState.selectedPreset))
             return Effect(value: .overwrite(list: result))
             
@@ -190,8 +193,9 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
         case .resetAlert(action: .buttonTapped(.yes)):
             guard let alertViewVisible = state.resetAlertState?.isVisible else { return .none }
             state.resetAlertState = nil
+            state.idStack = []
             environment.setItemToDefaults(.alertViewVisible, alertViewVisible)
-            let result = environment.calculate(.result(type: state.presetState.selectedPreset))
+            let result = environment.calculate(.reset(type: state.presetState.selectedPreset))
             return Effect(value: .overwrite(list: result))
             
         case .readyForCalculate(action: .success):
