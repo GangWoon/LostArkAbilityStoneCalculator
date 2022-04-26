@@ -2,6 +2,19 @@ import SwiftUI
 import Combine
 import ComposableArchitecture
 
+struct AnimatedImage: View {
+    let store: Store<AnimatedImageState, AnimatedImageAction>
+    
+    var body: some View {
+        WithViewStore(store) { viewStore in
+            Image(systemName: viewStore.imageName)
+                .resizable()
+                .onAppear { viewStore.send(.onAppear) }
+        }
+    }
+}
+
+// MARK: - State
 struct AnimatedImageState: Equatable {
     static let empty = Self(
         imageNameList: [
@@ -14,35 +27,57 @@ struct AnimatedImageState: Equatable {
         ]
     )
     var imageName: String {
+        guard imageNameList.count > index else { return "" }
         return imageNameList[index]
     }
+    let imageNameList: [String]
     var index: Int = .zero
-    var imageNameList: [String]
-    var isAnimated: Bool = true
 }
 
+// MARK: - Action
 enum AnimatedImageAction: Equatable {
     case onAppear
     case animateImage(result: Result<Int, Never>)
     case stopAnimate
 }
 
+// MARK: - Environment
 struct AnimatedImageEnvironment {
     static let live: Self = {
         let imageTimer = AnimatedImageTimer()
-        
         return Self(
-            fireTimer: imageTimer.fireTimer,
-            stopTimer: imageTimer.stopTimer
+            fireTimer: { imageTimer.fireTimer(limit: $0).eraseToEffect() },
+            stopTimer: { .fireAndForget{ imageTimer.stopTimer() } }
         )
     }()
-    let fireTimer: (Int) -> AnyPublisher<Int, Never>
-    let stopTimer: () -> Void
+    let fireTimer: (Int) -> Effect<Int, Never>
+    let stopTimer: () -> Effect<Never, Never>
+}
+
+// MARK: - Reducer
+let animatedImageReducer = Reducer<AnimatedImageState, AnimatedImageAction, AnimatedImageEnvironment> { state, action, environment in
+    switch action {
+    case .onAppear:
+        return environment.fireTimer(state.imageNameList.count - 1)
+            .eraseToEffect()
+            .catchToEffect(AnimatedImageAction.animateImage)
+        
+    case let .animateImage(result: .success(index)):
+        state.index = index
+        return .none
+        
+    case .animateImage:
+        return .none
+        
+    case .stopAnimate:
+        return environment.stopTimer()
+            .fireAndForget()
+    }
 }
 
 final class AnimatedImageTimer {
     private var timer: Timer?
-    var count: Int = .zero
+    private var count: Int = .zero
     
     func fireTimer(limit: Int) -> AnyPublisher<Int, Never> {
         let subject = PassthroughSubject<Int, Never>()
@@ -61,37 +96,5 @@ final class AnimatedImageTimer {
     
     func stopTimer() {
         timer?.invalidate()
-    }
-}
-
-let animatedImageReducer = Reducer<AnimatedImageState, AnimatedImageAction, AnimatedImageEnvironment> { state, action, environment in
-    switch action {
-    case .onAppear:
-        return environment.fireTimer(state.imageNameList.count - 1)
-            .eraseToEffect()
-            .catchToEffect(AnimatedImageAction.animateImage)
-        
-    case let .animateImage(result: .success(index)):
-        state.index = index
-        return .none
-        
-    case .animateImage:
-        return .none
-        
-    case .stopAnimate:
-        environment.stopTimer()
-        return .none
-    }
-}
-
-struct AnimatedImage: View {
-    let store: Store<AnimatedImageState, AnimatedImageAction>
-    
-    var body: some View {
-        WithViewStore(store) { viewStore in
-            Image(systemName: viewStore.imageName)
-            .resizable()
-            .onAppear { viewStore.send(.onAppear) }
-        }
     }
 }
