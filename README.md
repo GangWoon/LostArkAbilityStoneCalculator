@@ -1,5 +1,5 @@
 # LostArkAbilityStoneCalculator
-[시연영상](https://youtube.com/shorts/IJcWIB6P_ZI?feature=share) 
+[시연영상](https://youtube.com/shorts/t8NvJEWxVyg?feature=share) 
 - 화면(어두운 테마)
 ![Untitled-2022-03-14-2112-11](https://user-images.githubusercontent.com/48466830/165133409-a22e9f15-31f3-4a35-8159-858740bdd657.png)
 
