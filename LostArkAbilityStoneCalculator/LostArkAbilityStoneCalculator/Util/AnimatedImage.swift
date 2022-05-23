@@ -9,6 +9,7 @@ struct AnimatedImage: View {
         WithViewStore(store) { viewStore in
             Image(systemName: viewStore.imageName)
                 .resizable()
+                .foregroundColor(.white)
                 .onAppear { viewStore.send(.onAppear) }
         }
     }

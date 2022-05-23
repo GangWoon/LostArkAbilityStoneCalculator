@@ -47,6 +47,7 @@ struct AppView: View {
                             
                             Text("확률을 계산 중입니다\n조금만 기다려 주세요")
                                 .multilineTextAlignment(.center)
+                                .foregroundColor(.white)
                                 .font(.custom(style: .scDream(.semiBold), size: 14))
                             
                             Spacer()
