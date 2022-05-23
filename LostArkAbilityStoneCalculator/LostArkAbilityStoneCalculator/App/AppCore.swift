@@ -30,7 +30,7 @@ enum AppAction: Equatable {
     case guide(action: GuideAction)
     case animatedImage(action: AnimatedImageAction)
     case resetAlert(action: ResetAlertAction)
-    case readyForCalculate(action: Result<Bool, Error>)
+    case readyForCalculate(action: Result<Bool, Never>)
 }
 
 // MARK: - Environment
@@ -44,7 +44,9 @@ struct AppEnvironment {
             mainQueue: .main,
             calculatorIsValid: { calculator.isValid },
             readyToCalculate: calculator
-                .readyToCalculate()
+                .$isValid
+                .dropFirst()
+                .filter { $0 == true }
                 .eraseToEffect(),
             calculate: calculator.calculate,
             itemFromDefaults: { permanentStorage[$0] },
@@ -54,7 +56,7 @@ struct AppEnvironment {
     var uuid: () -> UUID
     var mainQueue: AnySchedulerOf<DispatchQueue>
     var calculatorIsValid: () -> Bool
-    var readyToCalculate: Effect<Bool, Error>
+    var readyToCalculate: Effect<Bool, Never>
     var calculate: (AbilityStoneCalculator.Action) -> CalculateResult
     var itemFromDefaults: (UserDefaults.RawType<Bool>) -> Bool
     var setItemToDefaults: (UserDefaults.RawType<Bool>, Bool) -> Void
@@ -205,11 +207,6 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
                 Effect(value: .animatedImage(action: .stopAnimate))
             )
             
-        case .readyForCalculate(action: .failure):
-            return environment.readyToCalculate
-                .receive(on: environment.mainQueue)
-                .catchToEffect(AppAction.readyForCalculate)
-            
         case .animatedImage(action: .stopAnimate):
             state.animatedImageState = nil
             return .none
@@ -217,7 +214,8 @@ let appReducer = Reducer<AppState, AppAction, AppEnvironment>.combine(
         case .contentHeader,
                 .abilityRow,
                 .resetAlert,
-                .animatedImage:
+                .animatedImage,
+                .readyForCalculate(action: .failure):
             return .none
         }
     }

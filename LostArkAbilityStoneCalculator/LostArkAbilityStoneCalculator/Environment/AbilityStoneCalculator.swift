@@ -79,18 +79,6 @@ final class AbilityStoneCalculator {
         }
     }
     
-    func readyToCalculate() -> AnyPublisher<Bool, Error> {
-        return $isValid
-            .tryMap { [weak self] _ in
-                let _ = try self?.calculateResult(type: .totalFourteen)
-                let _ = try self?.calculateResult(type: .totalSixteen)
-                return true
-            }
-            .mapError { _ in Error.notReady }
-            .retryWithDelay(try: 3)
-            .eraseToAnyPublisher()
-    }
-    
     private func undo(type: AbilityStonePreset) -> CalculateResult {
         _ = sequence.popLast()
         let calResult = try? calculateResult(type: type)
@@ -471,26 +459,6 @@ extension AbilityStonePreset {
             return 16
         case .totalFourteen:
             return 14
-        }
-    }
-}
-
-extension Publisher {
-    fileprivate func retryWithDelay<T, E>(try times: Int)
-    -> Publishers.Catch<
-        Self,
-        AnyPublisher<T, E>
-    > where T == Self.Output, E == Self.Failure
-    {
-        return self.catch { error -> AnyPublisher<T, E> in
-            return Publishers.Delay(
-                upstream: self,
-                interval: 1,
-                tolerance: 1,
-                scheduler: DispatchQueue.global()
-            )
-            .retry(times)
-            .eraseToAnyPublisher()
         }
     }
 }
