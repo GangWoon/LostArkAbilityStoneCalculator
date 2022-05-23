@@ -48,11 +48,35 @@ Store 입장에서는 계산기 내부 상태에 대해서 신경쓸 필요 없�
 
 <br>
 
-**- 큰 데이터를 다루는 방법** [issue](https://github.com/GangWoon/LostArkAbilityStoneCalculator/issues/3)
+**- @Published 잘못된 사용**
 
-알고리즘 결과 값이 상당히 큰 메모리를 차지합니다. 
+초기 값을 방출하는지 몰랐을 때, 아래와 같이 접근해서 문제를 해결하려고 했습니다.
+다른 분의 피드백으로 해당 속성을 구독했을때 문제가 있음을 확인한 후 dropFirst()를 통해서 문제를 해결했습니다.
 
-이를 set하고 난 직후 해당 값을 접근했을때 set이 되지 않는 문제가 있었습니다.
+<br>
 
-이 문제는 해당 값이 set이 될 동안 Error를 발생시켜서 준비가 될때 까지 기다리는 형태로 해결했습니다.
+~~**- 큰 데이터를 다루는 방법** [issue](https://github.com/GangWoon/LostArkAbilityStoneCalculator/issues/3)~~
 
+~~알고리즘 결과 값이 상당히 큰 메모리를 차지합니다. ~~
+
+~~이를 set하고 난 직후 해당 값을 접근했을때 set이 되지 않는 문제가 있었습니다.~~
+
+~~이 문제는 해당 값이 set이 될 동안 Error를 발생시켜서 준비가 될때 까지 기다리는 형태로 해결했습니다.~~
+
+
+
+<br>
+
+<br>
+
+<br>
+
+---
+
+### Reference
+
+Designer: Gavii
+
+Architecture: TCA
+
+Algorithm: https://heehoon.kim/dolpago (Heehoon Kim)
